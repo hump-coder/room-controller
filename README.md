@@ -24,3 +24,7 @@ touchscreen:
 The old TFT_eSPI based configuration was removed.  The project now
 uses [LVGL](https://github.com/lvgl/lvgl) together with Espressif's
 `esp_lcd_axs15231b` driver.
+
+The source code previously referenced the GT911 touch controller.  It has been
+updated to use a placeholder `DAXS15231BTouch` class so that the project targets
+the new hardware.
