@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <TFT_eSPI.h>
-#include <TAMC_GT911.h>
+#include "touch_daxs15231b.h"
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <vector>
@@ -9,7 +9,7 @@
 #include "config.h"
 
 TFT_eSPI tft = TFT_eSPI();
-TAMC_GT911 ts = TAMC_GT911(33, 32, 21, 25, 320, 480);
+DAXS15231BTouch ts;
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 Adafruit_AHTX0 aht10;
